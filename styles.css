@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1{
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+.choice{
+    height: 200px;
+    width: 200px;
+    overflow: hidden; /* Add this to ensure any overflow is hidden */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice:hover{
+    background-color :#641356;
+    cursor: pointer;
+}
+/*Responsive Sizing:
+
+By using max-width: 100%; and max-height: 100%;, the images are scaled down to fit within the .choice div without exceeding it.
+Aspect Ratio Maintenance:
+
+Using object-fit: contain; ensures that the image scales correctly to fit within its container while maintaining its original aspect ratio.
+Overflow Management:
+
+Adding overflow: hidden; to the .choice div prevents any overflow content from being visible, ensuring a cleaner layout.
+*/
+.img{
+    max-width: 100%; /* Ensure the image does not exceed the parent div's width */
+    max-height: 100%; /* Ensure the image does not exceed the parent div's height */
+    display: block; /* Remove any extra spacing below images */
+    object-fit: contain; /* Ensure the image fits within the parent div, maintaining its aspect ratio */
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+#user-score,
+#comp-score{
+    font-size: 4rem;
+}
+.msg-container{
+    margin-top: 5rem;
+}
+#msg{
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline;
+    padding: 2rem;
+    border-radius: 3rem;
+}
